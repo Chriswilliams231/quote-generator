@@ -47,7 +47,7 @@ body {
 }
 
 /* Media Query */
-@media screen and (max-width: 1000)  {
+@media screen and (max-width: 1000px)  {
     .quote-container {
         margin: auto 10px;
     }
