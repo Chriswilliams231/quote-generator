@@ -29,6 +29,13 @@ const newQuote = () => {
     quoteText.textContent = quote.text;
 
 }
+
+// Tweet Quote
+const tweetQuote = () => {
+    const tweetUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
+    window.open(tweetUrl, '_blank');
+}
+
 // Getting quotes from a github api
 // const getQuotes = async () => {
 //     const apiUrl = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
@@ -43,6 +50,9 @@ const newQuote = () => {
 //     }
 // }
 
+// Event Listener
+newQuoteBtn.addEventListener('click', newQuote)
+twitterBtn.addEventListener('click', tweetQuote)
 // On Load
 // getQuotes();
 newQuote()
