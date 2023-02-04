@@ -52,14 +52,15 @@ const tweetQuote = () => {
     window.open(tweetUrl, '_blank');
 }
 
-// Getting quotes from a github api
+// Getting quotes from a api
 // const getQuotes = async () => {
-//     const apiUrl = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
+//     const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
+//     const apiUrl = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
 
 //     try {
-//         const response = await fetch(apiUrl);
-//         apiQuotes = response.json();
-//         console.log(apiQuotes)
+//         const response = await fetch(proxyUrl + apiUrl);
+//         const data = await response.json();
+//         console.log(data)
 //         newQuote()
 //     } catch (err) {
 //         console.log(err)
@@ -71,4 +72,4 @@ newQuoteBtn.addEventListener('click', newQuote)
 twitterBtn.addEventListener('click', tweetQuote)
 // On Load
 // getQuotes();
-newQuote()
+newQuote();
