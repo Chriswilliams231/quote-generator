@@ -1,8 +1,15 @@
+const quoteContainer = document.getElementById('quote-container');
+const quoteText = document.getElementById('quote');
+const authorText = document.getElementById('author');
+const twitterBtn = document.getElementById('twitter');
+const newQuoteBtn = document.getElementById('new-quote');
+
+
 // let apiQuotes = [];
 
 // show new quote 
 const newQuote = () => {
-    // Picks a random quote from the apiQuotes array
+    // Picks a random quote from the local array
     const quote = localQuotes[Math.floor(Math.random() * localQuotes.length)]
     console.log(quote)
 }
