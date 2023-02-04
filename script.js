@@ -11,7 +11,23 @@ const newQuoteBtn = document.getElementById('new-quote');
 const newQuote = () => {
     // Picks a random quote from the local array
     const quote = localQuotes[Math.floor(Math.random() * localQuotes.length)]
-    console.log(quote)
+
+    // This will check is the quotes have a author or not
+    if (!quote.author) {
+        authorText.textContent = 'Unknown'
+    } else {
+        authorText.textContent = quote.author;
+
+    }
+
+    // This will check the quote length to determine the style
+    if (quote.text.length > 50) {
+        quoteText.classList.add('long-quote');
+    } else {
+        quoteText.classList.remove('long-quote');
+    }
+    quoteText.textContent = quote.text;
+
 }
 // Getting quotes from a github api
 // const getQuotes = async () => {
